@@ -32,13 +32,24 @@ header{
 main{
     display: grid;
     grid-template-columns: 1fr 1fr;
-   
+    grid-template-rows: 1fr 1fr;   
     grid-column: 1/3;
     grid-row: 2/3;
 
     /* background-image: url(../img/Capturar.JPG); */
 }
-
+.container1{
+  display: flex;
+  justify-content: center;
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+.container2{
+  display: flex;
+  justify-content: center;
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
 
 .esquerda{
     display: flex;
@@ -72,11 +83,44 @@ main{
 
 
 }
+.cabecalho{
+  display: flex;
+  align-items: center;
+  height: 15%;
+}
+.botao{
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  height: 15%;
+  align-items: center;
+  margin: 10px;
+}
+
+#btn1{
+  width: 100px;
+}
+#btn2{
+  width: 100px;
+}
+#btn3{
+  width: 100px;
+}
 
 .boxtexto{
     background-color: white;
-    width: 70%;
+    width: 80%;
+    height: 40%;
 
+}
+
+#box1{
+  width: 100%;
+  height: 100%;
+}
+#box2{
+  width: 100%;
+  height: 100%;
 }
 
 footer{
@@ -92,20 +136,50 @@ footer{
    
 
 @media (max-width: 600px){
-    main {
-        grid-template-columns: 1fr;
-        grid-template-rows: 55px 1fr 1fr 50px;
-      }
 
-      .esquerda {
-        grid-row: 1/3;
-        grid-column: 1/2;
-      }
-    
-      .direita {
-        grid-row: 3/5;
-        grid-column: 1/2;
-      }
+ 
+.container1{
+  display: flex;
+  justify-content: center;
+  grid-column: 1/3;
+  grid-row: 1/2;
+}
+.container2{
+  display: flex;
+  justify-content: center;
+  grid-column: 1/3;
+  grid-row: 2/3;
+}
 
+.esquerda{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 80%;    
+    margin: 20px;
+
+    background-color: black;
+    color: white;
+   
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+.direita{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    width: 80%; 
+    margin: 20px;
+
+    background-color: black;
+    color: white;
+     
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
 }
 
