@@ -113,6 +113,14 @@ main{
     height: 40%;
 
 }
+/* #barra { */
+  /* elimina configuração inicial barra de range */
+  /* -webkit-appearance: none;
+  margin: 0;
+  width: 90%;
+  padding: 0 5px;
+  height: 15px; */
+/* } */
 
 #box1{
   width: 100%;
