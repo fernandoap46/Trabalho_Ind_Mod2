@@ -49,6 +49,8 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     // adicionando o evento de click ao botão, quando ele é acionado esconde a classe container1 e mostra container2
     document.getElementById("btn2").addEventListener("click", esconder2);
+
+    
 })
 
 // window.onload = () => {
@@ -172,6 +174,23 @@ $(document).ready(function(){
       $(".caixatexto").css("visibility", "hidden");
     });
   });
+  // -----------------------------------liga e desliga padrão Cira de cesar
+$(document).ready(function(){
+  $(".on3").click(function(){
+    $(".caixatexto3").css("visibility", "visible");
+    $(".offset").css("visibility", "visible");
+  });
+});
+$(document).ready(function(){
+  $(".off3").click(function(){
+    $(".caixatexto3").css("visibility", "hidden");
+    $(".offset").css("visibility", "hidden");
+  });
+});
+// atualiza a pagina para voltar a tela inicial 
+$('.reset').click(function() {
+  location.reload();
+});       
 
 //---------------------------------------------------------------------------- inclusão cifra de cesar
 //Pegando a interação com o botão CIFRA
@@ -190,7 +209,7 @@ function cipherTextReturn(e) {
      const resultCipher = cipher.encode(offset, string);    
      const shownResult = document.getElementById("result-show")
 
-     let mensagemError = 'Ops...Não foi possível realizar sua Cifragem! Por favor adicione uma Mensagem e um Deslocamento, e tente novamente.'
+     let mensageError = 'Digite uma mensagem, e selecione um deslocamento.'
      
      window.scrollBy(0, window.innerHeight)
      if (offset,string == null && offset,string == undefined && offset,string == 0){
@@ -210,7 +229,7 @@ function decipherTextReturn(e) {
     const resultDecipher = cipher.decode(offset, string);
     const shownResult = document.getElementById("result-show")
     
-    let mensageError = 'Ops...Não foi possível realizar sua Decifragem! Por favor adicione a Mensagem Cifrada e o Deslocamento, e tente novamente.'
+    let mensageError = 'Digite uma mensagem, e selecione um deslocamento.'
       
     window.scrollBy(0, window.innerHeight)
     if (offset,string == null && offset,string == undefined && offset,string == 0){
