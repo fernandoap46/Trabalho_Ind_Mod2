@@ -6,55 +6,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <h1>Decodificador</h1>
     </header>
-    <main>    
+    <main>
+                
         <div class="container1">
-            <section class="esquerda">
-                <div class="cabecalho">
-                    <h2>Digite seu texto</h2>
+            <div class="img">
+                <img class="imgcontainer1" src="./assets/img/PC-.jpg" alt="" srcset=""> 
+            </div>
+                <div class="logopc">
+                    <h2>Decodificador</h2>
                 </div>
-                    
-                <div class="boxtexto">
-                    <input type="text" id="box1" span>
-                    <!-- <input type="range" id="barra" value="10" min="1" max="10" oninput="this.nextElementSibling.value = this.value"></input>
-                    <output>10</output> -->
-                    <span></span>
+                <div class="cabecalho">
+                    <h2>Como deseja codificar?</h2>                        
                 </div>
 
-                <div class="botao">
-                    <button id="btn1" onclick="checkInputs()" >Decodificar</button>
-                    <button id="btn2">Codificar</button>
+                <button class="on">Ligar</button>
+                <button class="off">Desligar</button>
+
+                <div class="ajustebtn">
+                    <button class="ajuste" id="btn1">16bits</button>
+                    <button class="ajuste" id="btn2">Cifra Cesar</button>
                 </div>
-            </section>
+                <div class="resetbtn">
+                    <button class="reset" id="resetbtn1">Reset</button>
+                </div>           
         </div>
+
         <div class="container2">
+            <div class="img">
+                <img class="imgcontainer1" src="./assets/img/PC-.jpg" alt="" srcset=""> 
+            </div>
+            <div class="logopc">
+                    <h2>Decodificador</h2>
+            </div>
+            <div class="resetbtn">
+                <button class="reset" id="resetbtn2">Reset</button>
+            </div>  
+            <div class="caixatexto">
+                <label for="">Digite seu texto:</label>
+                <input type="text" id="texto" />
+                <label for="resultado">Resultado:</label>
+                <div id="resultado">Sua mensagem aparecerá aqui</div>
+            </div>
+            
+            <button class="on2" >Ligar</button>
+            <button class="off2">Desligar</button>    
+        
+            <div class="ajustebtn">
+                <button class="ecriptcontrol" id="encript">Crifrar</button>
+                <button class="decryptcontrol" id="decrypt">Descrifrar</button>
+            </div>
+            </div>
+        </div> 
+        <!-- <div class="enter-text"></div> -->
+        <div class="container3">
+            <div class="img">
+                <img class="imgcontainer1" src="./assets/img/PC-.jpg" alt="" srcset=""> 
+            </div>
+            <div class="logopc">
+                    <h2>Decodificador</h2>
+            </div>
+            <div class="resetbtn">
+                <button class="reset" id="resetbtn2">Reset</button>
+            </div>  
 
-            <section class="direita">
-                <div class="cabecalho">
-                    <h2>O resultado saira aqui</h2>
-                </div>
-
-                <div class="box2">
-                    <h2></h2>
-                </div>
-
-                <div class="botao">
-                    <button id="btn3">Copiar</button>
-                </div>
-            </section>
+            <div class="caixatexto3">
+                <!-- <label for="text" class="label-text"> Digite seu texto:</label> -->
+                <label for="">Digite seu texto:</label>
+                <!-- Recebe informação do usuário -->
+                <textarea class="text-insert" id="text-insert" ></textarea>
+                <!-- Mostra nosso resultado -->
+                <div class="result-show" id="result-show">Sua mensagem aparecera aqui</div>
+            </div>
+            <!-- Caixa para manipular nosso botão e seletor de scroll -->
+            <div class="offset">
+                <!-- Scroll -->
+                <label for="offset" class="label-text">Escolha o deslocamento:</label>
+                <input type="number" id="offset" min="1" max="25" value="2" class="input-offset" />
+               
+            </div>
+             <!-- Demais botões -->
+             <div class="buttons-container">
+                <button class="buttonCipherbuttons" id="buttonCipher">Cifrar</button>
+                <button class="buttonDecipherbuttons" id="buttonDecipher">Decifrar</button>
+            </div>
+            <button class="on3" >Ligar</button>
+            <button class="off3">Desligar</button> 
         </div>    
         
     </main>
-    <footer>
-        <h3>Desenvolvido por Fernando Agostinho</h3>
-        <!-- <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt=""> -->
-        
-    </footer>
-
+    
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
