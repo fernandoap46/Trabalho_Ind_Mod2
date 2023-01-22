@@ -141,7 +141,22 @@ footer{
 
     color: white;
 }
-   
+span {
+  color: blue;
+  font-size: 50px;
+}
+span1{
+  color: blue;
+  font-size: 50px;
+}
+.boxtexto.error input {
+  border: 3px solid red ;
+}
+.boxtexto1.acerto{
+  border: 3px solid green ;
+
+}
+
 
 @media (max-width: 600px){
 
