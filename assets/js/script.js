@@ -42,6 +42,20 @@ document.addEventListener('DOMContentLoaded', function(){
     // adicionando o evento de click ao botão, quando ele é acionado esconde a classe container1 e mostra container2
     document.getElementById("btn1").addEventListener("click", esconder1);
 
+    // Função altera o valor do display quan a tela diminuir
+    function esconder1b(){
+    
+      document.querySelectorAll('.container1').forEach(function(el) {
+          el.style.display = 'none';
+       });
+  
+       document.querySelectorAll('.container2').forEach(function(el) {
+          el.style.display = 'flex';
+       });
+  }
+  // adicionando o evento de click ao botão, quando ele é acionado esconde a classe container1 e mostra container2
+  document.getElementById("btn1b").addEventListener("click", esconder1b);
+
     function esconder2(){
     
         document.querySelectorAll('.container1').forEach(function(el) {
@@ -54,6 +68,19 @@ document.addEventListener('DOMContentLoaded', function(){
     }
     // adicionando o evento de click ao botão, quando ele é acionado esconde a classe container1 e mostra container2
     document.getElementById("btn2").addEventListener("click", esconder2);
+
+    function esconder2b(){
+    
+      document.querySelectorAll('.container1').forEach(function(el) {
+          el.style.display = 'none';
+       });
+  
+       document.querySelectorAll('.container3').forEach(function(el) {
+          el.style.display = 'flex';
+       });
+  }
+  // adicionando o evento de click ao botão, quando ele é acionado esconde a classe container1 e mostra container2
+  document.getElementById("btn2b").addEventListener("click", esconder2b);
 
     
 })
