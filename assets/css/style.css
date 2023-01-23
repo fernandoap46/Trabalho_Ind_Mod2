@@ -46,7 +46,7 @@ main{
   grid-column: 7/16 ;
   
 
-  border: solid;
+ 
 
   
 
@@ -62,6 +62,8 @@ main{
   
  
 }
+
+
 
 .img{
   grid-column: 3;
@@ -393,3 +395,174 @@ span1{
 
 }
 
+@media (max-width: 600px) {
+/* troca das imagens de fundo */
+.imgcontainer1{
+  display: none;
+}
+
+main {
+  display: flex;
+  align-items:flex-start;
+  justify-content:center;
+}
+
+/* container1------------------------------------------------------------------------------- */
+
+.container1{
+  display:none;
+  justify-content:center;
+
+  background-color:#948541;
+  width: 80%;
+  height: 60%;
+}
+.resetbtn{
+  display: flex;
+  height: 15%;
+  width: 80%;
+  background-color: #CFC497;
+  justify-content: center;
+  border-bottom: solid 5px #A99D67;
+  border-left: solid 5px #A99D67;
+  border-right: solid 5px #A99D67;
+}
+
+.reset{
+  height: 40px;
+  width: 50%;
+  height: 60%;
+ 
+}
+
+.cabecalho{
+border: solid 15px;
+justify-content: center;
+margin-bottom: 5%;
+width: 80%;
+}
+
+.logopc{
+ display: none;
+}
+.on{
+display: none;
+}
+.off{
+ display: none; 
+}
+.ajuste{
+  width: 80px;
+  height: 40px;
+  margin: 10%;
+}
+
+.ajustebtn{
+  display: flex;
+  justify-content: space-around;
+  background-color: #CFC497;
+  width: 80%;
+
+  margin-top: 5%;
+
+  border-top: solid 5px #A99D67;
+  border-left: solid 5px #A99D67;
+  border-right: solid 5px #A99D67;
+}
+/* container2------------------------------------------------------------------------------- */
+
+.container2{
+  display: none;
+  justify-content:center;
+
+  background-color:#948541;
+  width: 80%;
+  height: 60%;
+}
+
+.on2{
+  display: none;
+}
+.off2{
+  display: none;
+}
+
+.caixatexto{
+  border: solid 15px black;
+  margin-bottom: 15px;
+  margin-top: 0;
+  width: 80%;  
+}
+
+.ecriptcontrol{
+  width: 80px;
+  height: 40px;
+  margin: 10%;
+}
+
+.decryptcontrol{
+  width: 80px;
+  height: 40px;
+  margin: 10%;
+}
+/* containner 3----------------------------------------------------------------------------- */
+.container3{
+  display: flex;
+  justify-content:center;
+  background-color:#948541;
+  width: 80%;
+  height: 60%;
+}
+
+.on3{
+  display: none;
+}
+.off3{
+  display: none; 
+}
+.buttonCipherbuttons{
+  width: 80px;
+  height: 40px;
+  margin: 10%;
+}
+
+.buttonDecipherbuttons{
+  width: 80%;
+  height: 40px;
+  margin: 10%;
+}
+
+.buttons-container{
+  display: flex;
+  justify-content: space-around;
+  background-color: #CFC497;
+  width: 80%;
+
+  margin-top: 5%;
+
+  border-top: solid 5px #A99D67;
+  border-left: solid 5px #A99D67;
+  border-right: solid 5px #A99D67;
+
+}
+
+.caixatexto3{
+  background-color:#C4D59B;
+  border-top: solid 15px black;
+  border-left: solid 15px black;
+  border-right: solid 15px black;
+  height: 25%;
+  width: 80%
+  
+}
+
+.offset{
+  border-bottom: solid 15px black;
+  border-left: solid 15px black;
+  border-right: solid 15px black;
+  background-color:#C4D59B;
+  height: 17%;
+  width: 80%;
+}
+
+}
