@@ -1,7 +1,9 @@
-// fonte https://github.com/Fefeprogrammer/Criptografia
+// fonte 
 
 // quando a pagina carregar execute o comando abaixo atraves do evento DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function(){
+
+
 
     let codar = document.querySelector('#encript').addEventListener('click', function(){
         let texto = document.querySelector('#texto').value
@@ -52,90 +54,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
     
 })
-
-// window.onload = () => {
-//     document.getElementById('cypher').disabled = true;
-//     document.getElementById('decypher').disabled = true;
-  
-//     document.getElementById('message-box').addEventListener('input', () => {
-//       enableButtons(); 
-//       addTextAreaRows();
-//       clearResults();
-//     });
-//     document.getElementById('cypher').addEventListener('click', cypher);
-//     document.getElementById('decypher').addEventListener('click', decypher);
-//   };
-  
-//   const enableButtons = () => {
-//     if (getMessage().trim().length !== 0) {
-//       document.getElementById('cypher').disabled = false;
-//       document.getElementById('decypher').disabled = false;
-//     } else {
-//       document.getElementById('cypher').disabled = true;
-//       document.getElementById('decypher').disabled = true;
-//     }
-//   };
-  
-//   const addTextAreaRows = () => {
-//     const txtArea = document.getElementById('message-box');
-//     txtArea.style.height = '8vh';
-//     txtArea.style.height = txtArea.scrollHeight + 'px';
-//   };
-  
-//   const clearResults = () => {
-//     if (document.getElementById('p-group')) 
-//       document.getElementById('results').removeChild(document.getElementById('p-group'));
-//   };
-  
-//   const cypher = () => {
-//     const cypheredCharCodes = cypherCharcodes(getCharcodesFromMessage());
-//     const resultMessage = transformIntoLetters(cypheredCharCodes);
-//     const method = 'criptografada';
-//     showResultOnPage(resultMessage, method);
-//     clearTextArea();
-//   };
-  
-//   const decypher = () => {
-//     const decypheredCharCodes = decypherCharcodes(getCharcodesFromMessage());
-//     const resultMessage = transformIntoLetters(decypheredCharCodes);
-//     const method = 'descriptografada';
-//     showResultOnPage(resultMessage, method);
-//     clearTextArea();
-//   };
-  
-//   const getMessage = () => document.getElementById('message-box').value;
-//   const getCharcodesFromMessage = () => getMessage().split('').map(val => val.charCodeAt());
-  
-//   const cypherCharcodes = charcodesArray => charcodesArray.map((charCode, i) => {
-//     if (charCode > 47 && charCode < 58) {
-//       charCode = (charCode - 48 + 33) % 10 + 48;
-//     } else if (charCode > 64 && charCode < 91) {
-//       charCode = (charCode - 65 + 33) % 26 + 65;
-//     } if (charCode > 96 && charCode < 192) {
-//       charCode = (charCode - 97 + 33) % 26 + 97;
-//     } else if (charCode > 191 && charCode < 222) {
-//       charCode = (charCode - 192 + 33) % 30 + 192;
-//     } else if (charCode > 221 && charCode <= 255) {
-//       charCode = (charCode - 222 + 33) % 34 + 222;
-//     } 
-//     return charCode;
-//   });
-  
-//   const decypherCharcodes = charcodesArray => charcodesArray.map((charCode, i) => {
-//     if (charCode > 47 && charCode < 58) {
-//       charCode = (charCode - 57 - 33) % 10 + 57;
-//     } else if (charCode > 64 && charCode < 91) {
-//       charCode = (charCode - 90 - 33) % 26 + 90;
-//     } else if (charCode > 96 && charCode < 192) {
-//       charCode = (charCode - 122 - 33) % 26 + 122;
-//     } else if (charCode > 191 && charCode < 222) {
-//       charCode = (charCode - 221 - 33) % 30 + 221;
-//     } else if (charCode > 221 && charCode <= 255) {
-//       charCode = (charCode - 255 - 33) % 34 + 255;
-//     }
-//     return charCode;
-//   });
-  
+// -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
   const transformIntoLetters = charcodesArray => String.fromCharCode.apply(this, charcodesArray);
   
   const showResultOnPage = (resultMessage, method) => {
@@ -151,6 +70,9 @@ document.addEventListener('DOMContentLoaded', function(){
     enableButtons();
     addTextAreaRows();
   };
+
+  // Comando atrelado aos botões de liga e descila do container 1
+  // Utilização de Jquery que atraves do evento de click, liga e desliga o desplay mas preserva seu espaço para não prejudiicar o leyout
   
   $(document).ready(function(){
     $(".on").click(function(){
@@ -163,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
   });
 
-// -----------------------------------liga e desliga padrão 16 bits
+// -----------------------------------liga e desliga padrão 64 bits
 $(document).ready(function(){
     $(".on2").click(function(){
       $(".caixatexto").css("visibility", "visible");
@@ -187,7 +109,10 @@ $(document).ready(function(){
     $(".offset").css("visibility", "hidden");
   });
 });
-// atualiza a pagina para voltar a tela inicial 
+
+// atrela a atualização da pagina ao evento de click do botão reset
+// por padrão apena o container 2 e 3 estão como none assim com este comando volta para o inicio do programa ativando o container 1 
+
 $('.reset').click(function() {
   location.reload();
 });       
