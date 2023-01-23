@@ -1,9 +1,11 @@
-// fonte 
+
 
 // quando a pagina carregar execute o comando abaixo atraves do evento DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function(){
 
-
+// atribuindo evento de click ao botão
+// peguando o valor de text
+// Atribua o resultado a variavel resultado para devolver ao html o resuldado da função
 
     let codar = document.querySelector('#encript').addEventListener('click', function(){
         let texto = document.querySelector('#texto').value
@@ -15,6 +17,7 @@ document.addEventListener('DOMContentLoaded', function(){
         document.querySelector('#resultado').innerHTML = Decrypt(texto)
     })
 
+// método codifica uma string para a base 64.
 
     function Encrypt(txt){
         let dec = btoa(txt)
@@ -25,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function(){
         let dec = atob(txt)
         return dec
     }
-
+// Função altera o valor do display, acessando sua caracteriste atraves de um evento de click
     function esconder1(){
     
         document.querySelectorAll('.container1').forEach(function(el) {
@@ -118,35 +121,42 @@ $('.reset').click(function() {
 });       
 
 //---------------------------------------------------------------------------- inclusão cifra de cesar
-//Pegando a interação com o botão CIFRA
 
+//Acessando as variaveis
 
 const buttonCipher = document.getElementById("buttonCipher");
 const buttonDecipher = document.getElementById("buttonDecipher");
-
 buttonCipher.addEventListener("click", cipherTextReturn);
 buttonDecipher.addEventListener("click", decipherTextReturn);
 
 function cipherTextReturn(e) {
-     e.preventDefault() //impede o recarregamento auto da página
-     const offset = Number(document.getElementById("offset").value); //lendo o valor do Numero do input
-     const string = document.getElementById('text-insert').value; //lendo o valor string da textarea
+    //impede o recarregamento de caracteristicas padrões de navegador
+     e.preventDefault()
+    //lendo o valor do Numero incerido no input
+     const offset = Number(document.getElementById("offset").value); 
+    //  Pegando o valor da string da textarea
+     const string = document.getElementById('text-insert').value; 
+    //  parametros
      const resultCipher = cipher.encode(offset, string);    
      const shownResult = document.getElementById("result-show")
-
+    // mensagem de erro
      let mensageError = 'Digite uma mensagem, e selecione um deslocamento.'
      
      window.scrollBy(0, window.innerHeight)
+    //  Verificação da condição de erro, fazendo o comparativo das informações recebidas
      if (offset,string == null && offset,string == undefined && offset,string == 0){
        shownResult.classList.add('error');
+      //  retorno do erro no html quando as caracteristicas acima forem true
        return shownResult.innerHTML = mensageError;
      }else {
+      // Caso contrario retorne o resultado no html
      shownResult.classList.remove('error')
      shownResult.classList.add('result')
-     return shownResult.innerHTML = resultCipher; //definindo o lugar (answers que esta no index.html) e colocando o resultado no HTML (innerHTML)
+      //definindo o lugar (answers que esta no index.html) e colocando o resultado no HTML (innerHTML)
+     return shownResult.innerHTML = resultCipher; 
      }
 }
- 
+//  repetimos o processo mais agora para sescriptografar
 function decipherTextReturn(e) {
     e.preventDefault();
     const offset = Number(document.getElementById("offset").value)
@@ -167,24 +177,26 @@ function decipherTextReturn(e) {
     }
   }
 
-//------------------------------------------------------------------------------------------ cipher.js
+//-----------------------Criando funções que ezecutão a codificação---------------------
+
+//Mensagem de erro 
 const cipher = {
     encode: function (offset, string) {
       if (!offset) {
-        throw new TypeError()     //Mensagem de erro 
+        throw new TypeError()     
       }
-  
-      let textCode = "";    //variavel da resposta
-  
-      for (let i = 0; i < string.length; i++) {     //loop para continuar enquanto houver letras
-  
-        let cifrar = string.charCodeAt(i);    //transforma o alfabeto padrao para o ASC (numero)
-  
-        if (cifrar >= 65 && cifrar <= 90) {   //ler apenas de A a Z maiusculas
-          textCode += String.fromCharCode((cifrar - 65 + offset) % 26 + 65);     //calculo do deslocamento para cifrar
+      //variavel da resposta
+      let textCode = "";    
+       //loop para continuar enquanto houver letras
+      for (let i = 0; i < string.length; i++) {    
+        //transforma o alfabeto padrao para o ASC (numero)
+        let cifrar = string.charCodeAt(i);    
+        //ler apenas de A a Z maiusculas
+        if (cifrar >= 65 && cifrar <= 90) {   
+          //calculo do deslocamento para cifrar
+          textCode += String.fromCharCode((cifrar - 65 + offset) % 26 + 65);     
           //String.fromCharCode transforma o ASC em letra
-  
-        } else if (cifrar >= 97 && cifrar <= 122) {     // minusculas
+          } else if (cifrar >= 97 && cifrar <= 122) {     // minusculas
           textCode += String.fromCharCode((cifrar - 97 + offset) % 26 + 97);
   
         } else{
