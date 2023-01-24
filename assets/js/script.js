@@ -1,89 +1,85 @@
-
-
 // quando a pagina carregar execute o comando abaixo atraves do evento DOMContentLoaded
 document.addEventListener('DOMContentLoaded', function(){
 
-// atribuindo evento de click ao botão
-// peguando o valor de text
-// Atribua o resultado a variavel resultado para devolver ao html o resuldado da função
+  // atribuindo evento de click ao botão
+  // peguando o valor de text
+  // Atribua o resultado a variavel resultado para devolver ao html o resuldado da função
+  let codar = document.querySelector('#encript').addEventListener('click', function(){
+    let texto = document.querySelector('#texto').value
+    document.querySelector('#resultado').innerHTML = Encrypt(texto)
+  })
 
-    let codar = document.querySelector('#encript').addEventListener('click', function(){
-        let texto = document.querySelector('#texto').value
-        document.querySelector('#resultado').innerHTML = Encrypt(texto)
-    })
+  let decodar = document.querySelector('#decrypt').addEventListener('click', function(){
+    let texto = document.querySelector('#texto').value
+    document.querySelector('#resultado').innerHTML = Decrypt(texto)
+  })
 
-    let decodar = document.querySelector('#decrypt').addEventListener('click', function(){
-        let texto = document.querySelector('#texto').value
-        document.querySelector('#resultado').innerHTML = Decrypt(texto)
-    })
+  // método codifica uma string para a base 64.
 
-// método codifica uma string para a base 64.
+  function Encrypt(txt){
+    let dec = btoa(txt)
+    return dec
+  }
 
-    function Encrypt(txt){
-        let dec = btoa(txt)
-        return dec
-    }
-
-    function Decrypt(txt){
-        let dec = atob(txt)
-        return dec
-    }
-// Função altera o valor do display, acessando sua caracteriste atraves de um evento de click
-    function esconder1(){
+  function Decrypt(txt){
+    let dec = atob(txt)
+    return dec
+  }
+  // Função altera o valor do display, acessando sua caracteriste atraves de um evento de click
+  function esconder1(){
     
-        document.querySelectorAll('.container1').forEach(function(el) {
-            el.style.display = 'none';
-         });
+    document.querySelectorAll('.container1').forEach(function(el) {
+      el.style.display = 'none';
+    });
     
-         document.querySelectorAll('.container2').forEach(function(el) {
-            el.style.display = 'grid';
-         });
-    }
-    // adicionando o evento de click ao botão, quando ele é acionado esconde a classe container1 e mostra container2
-    document.getElementById("btn1").addEventListener("click", esconder1);
+    document.querySelectorAll('.container2').forEach(function(el) {
+      el.style.display = 'grid';
+    });
+  }
+  // adicionando o evento de click ao botão, quando ele é acionado esconde a classe container1 e mostra container2
+  document.getElementById("btn1").addEventListener("click", esconder1);
 
-    // Função altera o valor do display quan a tela diminuir
-    function esconder1b(){
+  // Função altera o valor do display quan a tela diminuir
+  function esconder1b(){
     
-      document.querySelectorAll('.container1').forEach(function(el) {
-          el.style.display = 'none';
-       });
+    document.querySelectorAll('.container1').forEach(function(el) {
+      el.style.display = 'none';
+    });
   
-       document.querySelectorAll('.container2').forEach(function(el) {
-          el.style.display = 'flex';
-       });
+    document.querySelectorAll('.container2').forEach(function(el) {
+      el.style.display = 'flex';
+    });
   }
   // adicionando o evento de click ao botão, quando ele é acionado esconde a classe container1 e mostra container2
   document.getElementById("btn1b").addEventListener("click", esconder1b);
 
-    function esconder2(){
+  function esconder2(){
     
-        document.querySelectorAll('.container1').forEach(function(el) {
-            el.style.display = 'none';
-         });
+    document.querySelectorAll('.container1').forEach(function(el) {
+      el.style.display = 'none';
+    });
     
-         document.querySelectorAll('.container3').forEach(function(el) {
-            el.style.display = 'grid';
-         });
-    }
+    document.querySelectorAll('.container3').forEach(function(el) {
+      el.style.display = 'grid';
+    });
+  }
     // adicionando o evento de click ao botão, quando ele é acionado esconde a classe container1 e mostra container2
-    document.getElementById("btn2").addEventListener("click", esconder2);
+  document.getElementById("btn2").addEventListener("click", esconder2);
 
-    function esconder2b(){
+  function esconder2b(){
     
-      document.querySelectorAll('.container1').forEach(function(el) {
-          el.style.display = 'none';
-       });
+    document.querySelectorAll('.container1').forEach(function(el) {
+      el.style.display = 'none';
+    });
   
-       document.querySelectorAll('.container3').forEach(function(el) {
-          el.style.display = 'flex';
-       });
+    document.querySelectorAll('.container3').forEach(function(el) {
+      el.style.display = 'flex';
+    });
   }
   // adicionando o evento de click ao botão, quando ele é acionado esconde a classe container1 e mostra container2
   document.getElementById("btn2b").addEventListener("click", esconder2b);
-
-    
 })
+
 // -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
   const transformIntoLetters = charcodesArray => String.fromCharCode.apply(this, charcodesArray);
   
@@ -204,7 +200,7 @@ function decipherTextReturn(e) {
     }
   }
 
-//-----------------------Criando funções que ezecutão a codificação---------------------
+//-----------------------Criando funções que ezecução a codificação---------------------
 
 //Mensagem de erro 
 const cipher = {

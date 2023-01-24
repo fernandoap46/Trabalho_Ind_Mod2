@@ -6,12 +6,10 @@
   outline: 0;
   box-sizing: border-box;
 }
-
 html,
 body {
   width: 100%;
-  height: 100%;
-  
+  height: 100%;  
 }
 header{
   display: flex;
@@ -21,35 +19,23 @@ header{
   justify-content: center;  
 }
 main{
-  display: grid;
-  /* --------------------1---2--3--4--5--6--7--8--9-10-11-12-13-14-15-16-17-18-19-20 */
-  grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
-  /* --------------------1---2--3--4--5--6--7--8--9-10-11-12-13-14-15-16-17-18-19-20 */
-  grid-template-rows: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
-
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 100%;  
 }
-
+/* -----------------------------------------------------------------------------------Container1------------------------------------------------------------------- */
 .container1{
   display: grid;
   /* --------------------1---2--3--4--5--6--7--8--9-10-11-12-13-14-15-16-17-18-19-20 */
   grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
   /* --------------------1---2--3--4--5--6--7--8--9-10-11-12-13-14-15-16-17-18-19-20 */
   grid-template-rows: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
-
   width: 475px;
   height: 500px;
   margin: 0;
-
   /* posição grid da main */
   grid-column: 7/16 ;
-  
-
- 
-
-  
-
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -58,20 +44,15 @@ main{
   font-weight: 900px;
   /* background-color: black; */
   color: black;
-  margin: 10px;
-  
- 
+  margin: 10px; 
 }
-
 .ajustebtnb{
   display: none;
 }
-
 .img{
   grid-column: 3;
   grid-row: 4/18;
 }
-
 .logopc{
   display: flex;
   align-items:center;
@@ -86,13 +67,11 @@ main{
   padding: 0;
   background-color: grey;
 }
-
 .imgcontainer1{
   width: 397px;
   max-height: 500px;
   margin: 0;
 }
-
 .on{
   grid-column: 8;
   grid-row: 17;
@@ -108,70 +87,46 @@ main{
   font-family: 'Roboto', sans-serif;
   grid-column: 5;  
   grid-row: 17;
-
   width: 50px;
   height: 15px;
-
-  box-shadow: 0px 3px 0px 2px #000000;
- 
-  
+  box-shadow: 0px 3px 0px 2px #000000;  
 }
 .ajustebtn{
   display: flex;
   justify-content: space-between;
   width: 150px;
-
   grid-row: 17;
   grid-column:12 ;
 }
-
-.resetbtn{
-  
-  
+.resetbtn{  
   grid-column: 17/18;  
   grid-row: 15/17;
-
   width: 50px;
-  height: 15px;
-
-  
+  height: 15px;  
 }
 .reset{
   margin-left: 10px;
- 
-
   font-family: 'Roboto', sans-serif;
   font-size: 10px;
   box-shadow: 0px 3px 0px 2px #000000;
 }
-
 .ajuste{
   width: 60px;
 }
-
 .cabecalho{
   width: 247px;
   height: 165px;
-
   margin-left: 4px;
   margin-bottom: 4px;
-
   grid-column: 6;
-  grid-row: 7;
-  
-  background-color:#C4D59B;
- 
+  grid-row: 7;  
+  background-color:#C4D59B; 
  }
-
-
-.ajuste{
-  
+.ajuste{  
   font-size: 10px;
   box-shadow: 0px 3px 0px 2px #000000;
   font-family: 'Roboto', sans-serif;
 }
-/* container 2-------------------------- */
-
 /* --------------------------------------------------------------container 2--------------------------------------------------------------- */
 .container2{
   display: none;
@@ -179,14 +134,12 @@ main{
   grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
   /* --------------------1---2--3--4--5--6--7--8--9-10-11-12-13-14-15-16-17-18-19-20 */
   grid-template-rows: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
-
   width: 475px;
   height: 500px;
   margin: 0;
-
   /* posição grid da main */
   grid-column: 7/16 ;
-    align-items: center;
+  align-items: center;
   justify-content: center;
   flex-direction: column;
   font-family: 'VT323', monospace;
@@ -195,15 +148,12 @@ main{
   /* background-color: black; */
   color: black;
   margin: 10px;
-  
- 
 }
 .caixatexto{
   display: flex;
   grid-column: 6;
   grid-row: 7;
   padding-bottom: 10px;
-  
   margin-left: 5px;
   margin-right: 1px;
   background-color:#C4D59B;
@@ -215,11 +165,9 @@ main{
   display: flex;
   justify-content: space-between;
   width: 150px;
-
   grid-row: 17;
   grid-column:12 ;
 }
-
 .ecriptcontrol{
 grid-row: 3/4 ;
 grid-column:17/19 ;
@@ -227,7 +175,6 @@ width: 80px;
 margin: 10px;
 box-shadow: 0px 3px 0px 2px #000000;
 font-family: 'Roboto', sans-serif;
-
 }
 .decryptcontrol{
   grid-row: 5/6 ;
@@ -237,7 +184,6 @@ font-family: 'Roboto', sans-serif;
   box-shadow: 0px 3px 0px 2px #000000;
   font-family: 'Roboto', sans-serif;
 }
-
 .on2{
   grid-column: 8;
   grid-row: 17;
@@ -253,34 +199,25 @@ font-family: 'Roboto', sans-serif;
   font-family: 'Roboto', sans-serif;
   grid-column: 5;  
   grid-row: 17;
-
   width: 50px;
   height: 15px;
-
   box-shadow: 0px 3px 0px 2px #000000;
- 
-  
 }
 #texto {
   background-color:#C4D59B;
 }
-
 /* --------------------------------------------------------------container 2--------------------------------------------------------------- */
-
 .container3{
   display: none;
   /* --------------------1---2--3--4--5--6--7--8--9-10-11-12-13-14-15-16-17-18-19-20 */
   grid-template-columns: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
   /* --------------------1---2--3--4--5--6--7--8--9-10-11-12-13-14-15-16-17-18-19-20 */
   grid-template-rows: 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5% 5%;
-
   width: 475px;
   height: 500px;
   margin: 0;
-
   /* posição grid da main */
   grid-column: 7/16 ;
-  
   align-items: center;
   justify-content: center;
   flex-direction: column;
@@ -291,13 +228,11 @@ font-family: 'Roboto', sans-serif;
   color: black;
   margin: 10px;
 }
-
 .caixatexto3{
   display: flex;
   grid-column: 6;
   grid-row: 7;
   padding-bottom: 10px;
-  
   margin-left: 5px;
   margin-right: 1px;
   /* background-color:#C4D59B; */
@@ -305,7 +240,6 @@ font-family: 'Roboto', sans-serif;
   height: 150px;
   width: 245px;
  }
-
 .on3{
   grid-column: 8;
   grid-row: 17;
@@ -321,13 +255,9 @@ font-family: 'Roboto', sans-serif;
   font-family: 'Roboto', sans-serif;
   grid-column: 5;  
   grid-row: 17;
-
   width: 50px;
   height: 15px;
-
   box-shadow: 0px 3px 0px 2px #000000;
- 
-  
 }
 .buttonCipherbuttons{
   /* grid-row: 3/4 ;
@@ -336,32 +266,27 @@ font-family: 'Roboto', sans-serif;
   margin: 10px;
   box-shadow: 0px 3px 0px 2px #000000;
   font-family: 'Roboto', sans-serif;
-  
-  }
-  .buttonDecipherbuttons  {
-    /* grid-row: 5/6 ;
-    grid-column:17/19 ; */
-    width: 80px;
-    margin: 10px;
-    box-shadow: 0px 3px 0px 2px #000000;
-    font-family: 'Roboto', sans-serif;
-  }
-
-  .buttons-container{
-    display: flex;
-    justify-content: space-between;
-    width: 150px;
-     grid-row: 17 ;
-    grid-column:12 ;
-  
 }
-
+.buttonDecipherbuttons  {
+  /* grid-row: 5/6 ;
+  grid-column:17/19 ; */
+  width: 80px;
+  margin: 10px;
+  box-shadow: 0px 3px 0px 2px #000000;
+  font-family: 'Roboto', sans-serif;
+}
+.buttons-container{
+  display: flex;
+  justify-content: space-between;
+  width: 150px;
+  grid-row: 17 ;
+  grid-column:12 ;
+}
 .offset{
   display: flex;
   grid-column: 6;
   grid-row: 10;
   padding-bottom: 10px;
-  
   margin-left: 5px;
   margin-right: 1px;
   /* background-color:#C4D59B; */
@@ -369,7 +294,6 @@ font-family: 'Roboto', sans-serif;
   height: 100px;
   width: 245px;
 }
-
 .sticky {
   display: flex;
   background: rgb(42, 197, 211);
@@ -378,46 +302,24 @@ font-family: 'Roboto', sans-serif;
   margin-top: 20px;
 }
 
-span {
-  color: blue;
-  font-size: 20px;
-}
-span1{
-  color: blue;
-  font-size: 50px;
-}
-.boxtexto.error input {
-  border: 3px solid red ;
-}
-.boxtexto.acerto{
-  border: 3px solid green ;
-
-}
-
 @media (max-width: 600px) {
 /* troca das imagens de fundo */
 .imgcontainer1{
   display: none;
 }
-
 main {
   display: flex;
   align-items:flex-start;
   justify-content:center;
 }
-
 /* container1------------------------------------------------------------------------------- */
-
 .container1{
   display:flex;
   justify-content:center;
-
   background-color:#948541;
   width: 80%;
   height: 60%;
 }
-
-
 .resetbtn{
   display: flex;
   height: 15%;
@@ -428,21 +330,17 @@ main {
   border-left: solid 5px #A99D67;
   border-right: solid 5px #A99D67;
 }
-
 .reset{
   height: 40px;
   width: 50%;
   height: 60%;
- 
 }
-
 .cabecalho{
-border: solid 15px;
-justify-content: center;
-margin-bottom: 5%;
-width: 80%;
+  border: solid 15px;
+  justify-content: center;
+  margin-bottom: 5%;
+  width: 80%;
 }
-
 .logopc{
  display: none;
 }
@@ -456,76 +354,60 @@ display: none;
 .ajuste{
   display: none;
 }
-
 .ajusteb{
   width: 80px;
   height: 40px;
   margin: 10%;
   box-shadow: 0px 3px 0px 2px #000000;
-
 }
 .ajustebtnb{
-display: flex;
-justify-content: space-around;
-background-color: #CFC497;
-width: 80%;
-
-margin-top: 5%;
-
-border-top: solid 5px #A99D67;
-border-left: solid 5px #A99D67;
-border-right: solid 5px #A99D67;
+  display: flex;
+  justify-content: space-around;
+  background-color: #CFC497;
+  width: 80%;
+  margin-top: 5%;
+  border-top: solid 5px #A99D67;
+  border-left: solid 5px #A99D67;
+  border-right: solid 5px #A99D67;
 }
-/* ajueste------------------------------------------------- */
 /* container2------------------------------------------------------------------------------- */
-
 .container2{
   display: none;
   justify-content:center;
-
   background-color:#948541;
   width: 80%;
   height: 60%;
 }
-
 .on2{
   display: none;
 }
 .off2{
   display: none;
 }
-
 .caixatexto{
   border: solid 15px black;
   margin-bottom: 15px;
   margin-top: 0;
   width: 80%;  
 }
-
 .ecriptcontrol{
   width: 80px;
   height: 40px;
-  margin: 10%;
-  
+  margin: 10%;  
 }
-
 .decryptcontrol{
   width: 80px;
   height: 40px;
   margin: 10%;
 }
-
 .ajustebtn2{
   display: flex;
   background-color: #CFC497;
   width: 80%;
-
   border-top: solid 5px #A99D67;
   border-left: solid 5px #A99D67;
   border-right: solid 5px #A99D67;
 }
-
-
 /* containner 3----------------------------------------------------------------------------- */
 .container3{
   display: none;
@@ -534,7 +416,6 @@ border-right: solid 5px #A99D67;
   width: 80%;
   height: 60%;
 }
-
 .on3{
   display: none;
 }
@@ -546,27 +427,21 @@ border-right: solid 5px #A99D67;
   height: 40px;
   margin: 10%;
 }
-
 .buttonDecipherbuttons{
   width: 80%;
   height: 40px;
   margin: 10%;
 }
-
 .buttons-container{
   display: flex;
   justify-content: space-around;
   background-color: #CFC497;
   width: 80%;
-
   margin-top: 5%;
-
   border-top: solid 5px #A99D67;
   border-left: solid 5px #A99D67;
   border-right: solid 5px #A99D67;
-
 }
-
 .caixatexto3{
   background-color:#C4D59B;
   border-top: solid 15px black;
@@ -574,9 +449,7 @@ border-right: solid 5px #A99D67;
   border-right: solid 15px black;
   height: 25%;
   width: 80%
-  
 }
-
 .offset{
   border-bottom: solid 15px black;
   border-left: solid 15px black;
@@ -585,5 +458,4 @@ border-right: solid 5px #A99D67;
   height: 17%;
   width: 80%;
 }
-
 }
